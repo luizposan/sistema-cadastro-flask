@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Clientes</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<h1>Lista de Clientes</h1>
+
+<a href="/cadastrar" class="botao">Cadastrar Cliente</a>
+
+<ul>
+    {% for cliente in clientes %}
+        <li>
+            <strong>{{ cliente[1] }}</strong> - {{ cliente[2] }}
+        </li>
+    {% else %}
+        <li>Nenhum cliente cadastrado.</li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>
